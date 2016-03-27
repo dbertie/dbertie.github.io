@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted the session continuity testing page.</p>
+
+<script src="http://alberttar-wsmr2.internal.salesforce.com:6109/lightning/lightning.out.js"></script>
+    <div id="target"/>
+    <script>
+    $Lightning.use("embeddedService:liveAgentSidebarApp", function() {
+       $Lightning.createComponent("embeddedService:liveAgentSidebar", {
+           deploymentId : '572xx0000000006',
+           orgId : '00Dxx0000001gHB',
+           buttonId : '573xx0000000006',
+           endpointURL: 'http://alberttar-wsmr2:8096/chat',
+           chasitorContentServerEndpointURL : 'http://alberttar-wsmr2:8095/content',
+           chasitorSrcURL : ['http://alberttar-wsmr2.internal.salesforce.com:6109/jslibrary/1446053165000/ui-sfdc-javascript/debug/SfdcCore.js', 'http://alberttar-wsmr2:8095/content/g/js/37.0/chasitor.js'],
+               avatarImgURL : 'https://s3.amazonaws.com/uifaces/faces/twitter/jonohunt/128.jpg',
+                waitingStateBackgroundImgURL : 'http://i.imgur.com/Ka1Upks.png',
+                smallCompanyLogoImgURL : 'http://i.imgur.com/VcOM1rT.png',
+       }, "target");
+    },'http://bertie.localhost.force.com:6109/esw');
+    </script>
+</body>
+</html>
