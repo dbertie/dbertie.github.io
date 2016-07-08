@@ -10,7 +10,7 @@
     <div id="target"/>
     
     <script src="http://alberttar-wsmr2:6109/lightning/lightning.out.js"></script>
-    <script src="http://alberttar-wsmr2:6109/embeddedservice/204.0/esw.min.js"></script>
+    <script src="http://alberttar-wsmr2:6109/embeddedservice/204.0/esw.js"></script>
     <script>
         var initESW = function(gslbBaseUrl) {
             embedded_svc.settings.avatarImgURL = 'https://s3.amazonaws.com/uifaces/faces/twitter/jonohunt/128.jpg';
@@ -18,8 +18,7 @@
             embedded_svc.settings.smallCompanyLogoImgURL = 'http://i.imgur.com/VcOM1rT.png';
             embedded_svc.settings.isExternalPage = true;
             
-            embedded_svc.init('http://alberttar-wsmr2:6109', 'http://alberttar-wsmr2:8096/chat', 'http://alberttar-wsmr2:8095/content',null,
-                              '572xx0000000006', '00Dxx0000001gHB', '573xx0000000006', '204.0', gslbBaseUrl);
+            embedded_svc.init('http://alberttar-wsmr2:6109', 'http://alberttar-wsmr2:8096/chat', 'http://alberttar-wsmr2:8095/content','http://bertie.localhost.force.com:6109/esw','572xx0000000006', '00Dxx0000001gHB', '573xx0000000006', '204.0', gslbBaseUrl);
         }
     if (!window.embedded_svc) {
         var s = document.createElement('script');
@@ -27,7 +26,7 @@
         s.onload=function() { initESW(null); };
         document.body.appendChild(s);
     } else {
-        initESW('http://bertie.localhost.force.com:6109/esw');
+        initESW('http://alberttar-wsmr2:6109');
     }
     </script>
 </body>
